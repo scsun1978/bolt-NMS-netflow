@@ -1,0 +1,42 @@
+.card-list {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.card-list:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card-list .card-title {
+  color: #0052CC;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0052CC;
+  padding-bottom: 0.5rem;
+}
+
+.card-list .table {
+  margin-bottom: 0;
+}
+
+.card-list .table th {
+  font-weight: 600;
+  color: #495057;
+}
+
+.card-list .table td {
+  vertical-align: middle;
+}
+
+.card-list .btn-link {
+  padding: 0;
+  margin-right: 1rem;
+}
+
+.card-list .btn-link:last-child {
+  margin-right: 0;
+}

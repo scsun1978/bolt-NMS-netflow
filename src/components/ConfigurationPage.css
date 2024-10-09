@@ -1,0 +1,51 @@
+.configuration-page {
+  background-color: #f8f9fa;
+}
+
+.config-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.config-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.config-card .card-title {
+  color: #0052CC;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0052CC;
+  padding-bottom: 0.5rem;
+}
+
+.config-card .card-body {
+  padding: 1.5rem;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  font-weight: 600;
+  color: #495057;
+}
+
+.btn-primary {
+  background-color: #0052CC;
+  border-color: #0052CC;
+}
+
+.btn-primary:hover {
+  background-color: #0043A4;
+  border-color: #0043A4;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0052CC;
+  box-shadow: 0 0 0 0.2rem rgba(0, 82, 204, 0.25);
+}

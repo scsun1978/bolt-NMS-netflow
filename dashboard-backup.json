@@ -1,0 +1,131 @@
+{
+  "version": "1.0",
+  "components": {
+    "TrafficTrend": {
+      "chartOptions": {
+        "responsive": true,
+        "plugins": {
+          "legend": {
+            "position": "top"
+          },
+          "title": {
+            "display": true,
+            "text": "实时带宽监控"
+          }
+        },
+        "scales": {
+          "y": {
+            "beginAtZero": true,
+            "max": 100,
+            "title": {
+              "display": true,
+              "text": "带宽使用率 (Mbps)"
+            }
+          }
+        }
+      },
+      "updateInterval": 1000
+    },
+    "UserTrafficDistribution": {
+      "chartOptions": {
+        "responsive": true,
+        "plugins": {
+          "legend": {
+            "position": "top"
+          },
+          "title": {
+            "display": true,
+            "text": "用户网段流量分布"
+          }
+        },
+        "animation": {
+          "duration": 1000,
+          "easing": "linear"
+        }
+      },
+      "updateInterval": 5000
+    },
+    "ApplicationTrafficDistribution": {
+      "chartOptions": {
+        "responsive": true,
+        "plugins": {
+          "legend": {
+            "position": "top"
+          },
+          "title": {
+            "display": true,
+            "text": "应用流量分布"
+          }
+        },
+        "animation": {
+          "duration": 1000,
+          "easing": "linear"
+        }
+      },
+      "updateInterval": 5000
+    },
+    "TrafficCalendar": {
+      "calendarOptions": {
+        "days": ["日", "一", "二", "三", "四", "五", "六"],
+        "trafficLevels": {
+          "normal": "success",
+          "warning": "warning",
+          "danger": "danger"
+        }
+      }
+    },
+    "ImportantNotices": {
+      "sankeyOptions": {
+        "margin": { "top": 40, "right": 160, "bottom": 40, "left": 160 },
+        "align": "justify",
+        "colors": { "scheme": "category10" },
+        "nodeOpacity": 1,
+        "nodeThickness": 18,
+        "nodeInnerPadding": 3,
+        "nodeSpacing": 24,
+        "nodeBorderWidth": 0,
+        "nodeBorderColor": { "from": "color", "modifiers": [["darker", 0.8]] },
+        "linkOpacity": 0.5,
+        "linkHoverOthersOpacity": 0.1,
+        "enableLinkGradient": true
+      }
+    },
+    "AlertModal": {
+      "size": "xl",
+      "chartOptions": {
+        "responsive": true,
+        "plugins": {
+          "legend": {
+            "position": "top"
+          },
+          "title": {
+            "display": true,
+            "text": "告警相关流量趋势"
+          }
+        }
+      }
+    }
+  },
+  "layout": {
+    "dashboard": [
+      { "component": "TrafficTrend", "size": { "md": 12 } },
+      { "component": "UserTrafficDistribution", "size": { "md": 6 } },
+      { "component": "ApplicationTrafficDistribution", "size": { "md": 6 } },
+      { "component": "TrafficCalendar", "size": { "md": 12 } },
+      { "component": "ImportantNotices", "size": { "md": 12 } }
+    ]
+  },
+  "sidebarConfig": {
+    "menuItems": [
+      { "name": "仪表盘", "icon": "Grid", "path": "/" },
+      { 
+        "name": "洞察", 
+        "icon": "Eye",
+        "subItems": [
+          { "name": "会话列表", "path": "/sessions" },
+          { "name": "重点关注流量", "path": "/important-traffic" }
+        ]
+      }
+    ]
+  }
+}
